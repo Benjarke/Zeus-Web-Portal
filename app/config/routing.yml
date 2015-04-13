@@ -1,0 +1,24 @@
+app:
+    resource: @AppBundle/Controller/
+    type:     annotation
+first_route:
+    path:      /test/works
+    defaults:  { _controller: AppBundle:Default:testFunction }
+second_route:
+    path:      /api/v2/signup.json
+    defaults:  { _controller: AppBundle:Default:signupFunction }
+third_route:
+    path:      /api/v2/devices.json
+    defaults:  { _controller: AppBundle:Default:devicesFunction }
+forth_route:
+    path:      /api/v2/devices/{id}/data.json
+    defaults:  { _controller: AppBundle:Default:devicesUidDataFunction }
+fifth_route:
+    path:      /api/v2/devices/{id}/verify.json
+    defaults:  { _controller: AppBundle:Default:verifyFunction }
+sixth_route:
+    path:      /api/v2/devices/{id}.json
+    defaults:  { _controller: AppBundle:Default:uidFunction }
+seventh_route:
+    path:      /api/v2/devices/{id}/response
+    defaults:  { _controller: AppBundle:Default:lockFunction }
